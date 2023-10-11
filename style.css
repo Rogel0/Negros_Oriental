@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+  }
+
+  :root{
+    --bg-color: #f8f8f8;
+    --text-color: #f33d4c;
+    --second-color: #a09dab;
+    --main-color: #d6f45f;
+    --big-font: 8rem;
+    --h2-font: 4rem;
+    --p-font: 1.1rem;
+    --home-color: gray;
+  }
+
+  
+  
+  header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(13, 13, 13, 0.8);
+    padding: 0 10%;
+    transition: .3s;
+    flex-wrap: wrap;
+    align-content: space-between;
+    flex-direction: row;
+  }
+  
+  .logo img{
+    max-width: 100%;
+    width: 120px;
+    height: auto;
+  }
+  
+  .navlist {
+    display: flex;
+  }
+  .navlist li{
+    position: relative;
+  }
+  .navlist a{
+    font-size: var(--p-font);
+    color: var(--main-color);
+    font-weight: 500;
+    padding: 10px 27px;
+    
+  }
+  
+  .navlist a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: green;
+    bottom: -3px;
+    left: 0;
+    transition: ease .40s;
+    
+  }
+  
+  .navlist a:hover::after {
+    width: 100%;
+    
+  }
+
+
+  section {
+    padding: 130px 18%;
+  }
+  
+  .home {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 4rem;
+    /* background-color: rgb(59, 58, 58); */
+    background-image: url(./image/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .home-text h1{
+    margin: 10px 0px 25px;
+    font-size: var(--big-font);
+    line-height: 1;
+    font-weight: 500;
+  }
+  
+  .home-text h5 {
+    margin-bottom: 23px;
+    font-size: 19px;
+    font-weight: 500;
+  }
+  
+  span {
+    color: var(--main-color);
+  }
+  
+  .home-text h3 {
+    color: var(--main-color);
+    font-size: 40px;
+    font-weight: 500;
+  }
+  
+  
+  .social a{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+    font-size: 17px;
+    color: var(--text-color);
+    margin-right: 22px;
+    margin-bottom: 30px;
+    
+  }
+  
+  .social a:hover {
+    transform: scale(1.1);
+    background: var(--bg-color);
+    transition: .5s;
+  }
+
+
+
+  .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(283px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .col {
+    position: relative;
+  }
+  
+  .col img {
+    max-width: 100%;
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    transition: all .40s;
+  }
+  
+  
+  
+  .layer h3 {
+    position: absolute;
+    width: 100%;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--bg-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .40s;
+    color: #efef0d;
+    text-shadow: rgba(34, 22, 22, 10%);
+  }
+  
+  .layer:hover h3 {
+    bottom: 52%;
+    opacity: 1;
+  }
+  
+  .layer h5 {
+    position: absolute;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--bg-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .40s;
+  }
+  
+  .layer:hover h5 {
+    bottom: 48%;
+    opacity: 1;
+  }
+
+  .heritage-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .heritage-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+  }
+
+  .heritage-img-container img{
+    max-width: 100%;
+    width: 580px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .heritage-img-container img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+  }
+
+  .heritage-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+    margin-top: 30px;
+  }
+
+    .heritage-text-container h1{
+        font-size: var(--h2-font);
+        font-weight: 500;
+        color: var(--main-color);
+        margin-bottom: 20px;
+    }
+
+    .heritage-text-container p{
+        font-size: var(--p-font);
+        font-weight: 500;
+        color: var(--second-color);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+
+    .booking-form h2 {
+        font-weight: 500;
+        color: var(--second-color);
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+
+      .booking-form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+      }
+      
+      .booking-form .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      
+      .booking-form label {
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      
+      .booking-form input,
+      .booking-form select {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f2f2f2;
+        font-size: 16px;
+        width: 100%;
+      }
+      
+      .booking-form button[type="submit"] {
+        background-color: var(--second-color);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      .booking-form button[type="submit"]:hover {
+        background-color: #333;
+      }
+
+      .carousel {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .carousel img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .carousel img.active {
+        opacity: 1;
+    }
+
+    .carousel button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .carousel button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel button.prev {
+        left: 20px;
+    }
+
+    .carousel button.next {
+        right: 20px;
+    }
